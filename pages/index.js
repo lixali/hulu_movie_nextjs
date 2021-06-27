@@ -1,9 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
+
 import requests from '../utils/requests.js'
-import Header from './components/Header'
-import Nav from './components/Nav.js'
-import Results from './components/Results.js'
+import Header from '../components/Header'
+import Nav from '../components/Nav.js'
+import Results from '../components/Results.js'
 
 export default function Home({results}) {
   //console.log(props)
