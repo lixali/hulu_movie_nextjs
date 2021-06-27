@@ -9,7 +9,7 @@ export default function Home({results}) {
   //console.log(props)
   return (
     <div >
-      <title> let's build it </title>
+      <title> Build it Make it </title>
       <Header></Header>
       <Nav></Nav>
       <Results results={results}></Results>
