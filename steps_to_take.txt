@@ -1,0 +1,29 @@
+(1) create nextjs project 
+    npx create-next-app hulu_2_0
+
+### the tailwind css setup can be found in https://tailwindcss.com/docs/guides/nextjs
+(2) install tailwind css for nenxtjs (react might have different command)
+    npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+
+(3) install init file for tailwind css 
+    npx tailwindcss init -p
+
+
+(4) in tailwind.config.js file, remove "purge: []", add the following
+    mode: 'jit',
+    purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+
+
+(5) remove everything in global.css and add the following
+    /* ./styles/globals.css */
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+
+(6) add animation: ['group-hover'] to next.config.js; add the following to tailwind.config.js
+    extend: {
+      animation: ['group-hover'],  //need to add this, otherwise the bounce animation of tailwind scss will not work
+    },
+
+(7) install tailwind-scrollbar-hide ; google it
